@@ -3,23 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Home</title>
 </head>
 <body>
-    <h3>all blogs</h3>
-    <% if (blogs.length > 0) { %>
-        <% blogs.forEach(blog => { %>
-            <h3 class="title"><%= blog.title %></h3>
-            <p class="snippet"><%= blog.body %></p>
-          
-        <% }) %>
-      <% } else { %>
-        <p>There are no blogs to display...</p>
-      <% } %>
-     
+   
+    
+    <nav style=" display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;">
+        <div class="site-title">
+          <a href="/" style="color: black;
+          font-weight: 300;"><h1 style="font-size: 3em;">IR POSTS</h1></a>
+          <p style="color: black;
+          font-weight: 300;">IR 3rds Site</p>
+        </div>
+        <ul style="display: flex;
+        justify-content: space-between;
+        align-items: flex-end;">
+          <li style="list-style-type: none;
+          margin-left: 20px; color: black;"><a href="/">Blogs</a></li>
+          <li style="list-style-type: none;
+          margin-left: 20px; color: #000;"><a href="/newblog">New Blog</a></li>
+        </ul>
+      </nav>
+      
+    <h1>All Blogs</h1>
 
+    <div class="blogs" style="
+    display: block;
+    margin: 40px 0;
+    padding-left: 30px;
+    border-left: 6px solid crimson;
+">
 
+            <% if (blogs.length > 0) { %>
+                <% blogs.forEach(blog => { %>
+                    <h3 style="
+                    margin-left: 50px;
+                "><%= blog.title %></h3>
+                    <p style="
+                    margin-left: 50px;
+                "><%= blog.body %></p>
+                  
+                <% }) %>
+              <% } else { %>
+                <p>There are no blogs to display...</p>
+              <% } %>
+            </div>
 
-    <a href="/newblog">Creat New Blog</a>
+    
+            <footer style="color: black;
+            text-align: center;
+            margin: 80px auto 20px;">
+                Copyright &copy; PK 2020
+              </footer>
+
 </body>
 </html>

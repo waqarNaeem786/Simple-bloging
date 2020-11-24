@@ -4,18 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bloger|blog here</title>
+   
 </head>
 <body>
-    <form action="/blog" method="POST">
-    
-    <label for="title">Title</label>
-    <input type="text" name="title" id="title" required><br>
-    <label for="blog-body">My blog</label>
-    <textarea type="text" name="myblog" id="myblog" required>
+    <nav style=" display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;">
+        <div class="site-title">
+          <a href="/" style="color: black;
+          font-weight: 300;"><h1 style="font-size: 3em;">IR POSTS</h1></a>
+          <p style="color: black;
+          font-weight: 300;">IR 3rds Site</p>
+        </div>
+        <ul style="display: flex;
+        justify-content: space-between;
+        align-items: flex-end;">
+          <li style="list-style-type: none;
+          margin-left: 20px; color: black;"><a href="/">Blogs</a></li>
+          <li style="list-style-type: none;
+          margin-left: 20px; color: black;"><a href="/newblog">New Blog</a></li>
+        </ul>
+      </nav>
+    <form action="/blog" method="POST" style="max-width: 400px;
+    margin: 0 auto;">  
+    <label for="title" style="display: block;
+    margin-top: 24px;">Title</label><br>
+    <input type="text" name="title" id="title" required style="display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;"><br>
+    <label for="blog-body" style="display: block;
+    margin-top: 24px;">My blog</label><br>
+    <textarea type="text" name="myblog" id="myblog" required style="display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;height: 120px;">
     </textarea><br>
-    <button>post</button>
-    </form>
-
-    <a href="/">home</a>
+    <button style="margin-top: 20px;
+    background: crimson;
+    color: white;
+    padding: 6px;
+    border: 0;
+    font-size: 1.2em;
+    cursor: pointer;">post</button><br>
+    </form><br>
+    
+    <footer style="color: #000;
+    text-align: center;
+    margin: 80px auto 20px;">
+        Copyright &copy; pk 2020
+      </footer>
 </body>
 </html>
